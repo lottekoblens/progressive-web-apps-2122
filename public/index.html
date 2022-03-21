@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script type="module" src="./scripts/app.js"></script>
+    <title>Foodchecker</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>THINK ABOUT YOUR ALLERGIES</h1>
+      <p>Find the food that fits your diet, by scanning the barcode of the products</p>
+      <button id="scan-button">
+        Start scanning
+        <img src="./images/barcode.png" />
+      </button>
+      <!-- video for scanning gets in this div -->
+      <div id="scan"></div>
+      <!-- loading icon -->
+      <div class="loading" id="loading"><div class="loading-ring"></div></div>
+      <!-- red line while scanning -->
+      <div id="redLine" class="hidden"></div>
+      <!-- section for info of product -->
+      <section id="result" class="moveToTop">
+        <h2>No product scanned yet.</h2>
+        <img id="product-image" src="" />
+        <h3>Use the scanner to get more information about the product.</h3>
+        <ul></ul>
+        <h3></h3>
+        <ul></ul>
+        <button id="continue-button">
+          Continue scanning
+          <img src="./images/barcode.png" />
+        </button>
+      </section>
+      <!-- popup for error state -->
+      <div id="popup" class="hidden">
+        <article id="error">
+          <h3>Sorry, can't find the barcode.</h3>
+          <p>Try searching again by typing in the barcode</p>
+          <form action="#">
+            <input type="text" id="searchField" />
+            <input type="button" value="Search" />
+          </form>
+          <a href="#" id="again">Or try scanning again</a>
+          <p id="invalid_code" class="hidden">No product found</p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
