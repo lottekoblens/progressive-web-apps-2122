@@ -2,6 +2,8 @@ const express = require(`express`);
 const app = express();
 const port = 5555;
 
+app.set('view engine', 'ejs');
+
 app.use(express.static('public'));
 app.listen(5555);
 app.get(`/`, (req, res) => {
