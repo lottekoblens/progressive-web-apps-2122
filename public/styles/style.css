@@ -15,7 +15,7 @@ main {
   text-align: center;
 }
 
-main > h1 {
+main>h1 {
   font-size: 3em;
   margin: 0.2em 0;
   color: #1e352f;
@@ -61,6 +61,7 @@ button:active {
   background: rgb(42, 151, 82);
   border: 0.2em solid black;
 }
+
 button:disabled {
   opacity: 50%;
   background: white;
@@ -132,6 +133,7 @@ h3 {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -177,7 +179,7 @@ li {
   top: calc(50vh - 65vmin / 2);
 }
 
-#error > * {
+#error>* {
   margin: 1em auto;
   width: 60vmin;
 }
@@ -187,7 +189,7 @@ form {
   flex-direction: column;
 }
 
-input[type='button'] {
+input[type='submit'] {
   width: 20vmin;
   background-color: #ba73c9;
   color: black;
@@ -214,9 +216,11 @@ input[type='button'] {
   0% {
     top: 45%;
   }
+
   50% {
     top: 70%;
   }
+
   100% {
     top: 45%;
   }

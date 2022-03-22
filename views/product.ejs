@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head'); %>
+</head>
+
+<body>
+    <main>
+        <article id="product_info">
+            <h2>
+                <%= product.product_name %>
+            </h2>
+            <img src=<%=product.image_url %> alt="Product image">
+            <p>
+                Quantity: <%= product.quantity %>
+            </p>
+            <% if(product.ingredients_text_en) { %>
+            <section>
+                <h3>Ingredients:</h3>
+                <ul>
+                    <% product.ingredients_text_en.split(', ').forEach(ingredient=> { %>
+                    <li>
+                        <%= ingredient %>
+                    </li>
+                    <% }) %>
+                </ul>
+            </section>
+            <% } %>
+            <% if(product.ingredients_text_en) { %>
+            <section>
+                <h3>Allergies:</h3>
+                <ul>
+                    <% product.allergens_imported.split(', ').forEach(allergen=> { %>
+                    <li>
+                        <%= allergen %>
+                    </li>
+                    <% }) %>
+                </ul>
+            </section>
+            <% } %>
+        </article>
+    </main>
+</body>
+
+</html>

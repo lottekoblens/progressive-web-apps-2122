@@ -7,13 +7,12 @@
     <!-- popup for error state -->
     <div id="popup">
       <article id="error">
-        <h3>Sorry, can't find the barcode.</h3>
-        <p>Try searching again by typing in the barcode</p>
-        <form action="#">
-          <input type="text" id="searchField" />
-          <input type="button" value="Search" />
+        <h3>Search product</h3>
+        <p>Type in the barcode to find the product</p>
+        <form method="GET" action="/product">
+          <input type="text" id="searchField" name="query" />
+          <input type="submit" value="Search" />
         </form>
-        <a href="#" id="again">Or try scanning again</a>
         <p id="invalid_code" class="hidden">No product found</p>
       </article>
     </div>
