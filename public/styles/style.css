@@ -1,16 +1,20 @@
 body {
   background: #7ea76c;
+  background-image: url('../images/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Copperplate', fantasy;
   scroll-behavior: smooth;
+  height: 100vh;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   height: 100%;
-  color: white;
+  color: black;
   margin: 0 0.5em;
   text-align: center;
 }
@@ -156,11 +160,11 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  margin-top: 2em;
 }
 
 .moveToTop {
-  margin-top: -16em;
+  margin-top: -1em;
 }
 
 li {
@@ -170,13 +174,13 @@ li {
 
 #error {
   position: absolute;
-  height: 65vmin;
+  height: 50vmin;
   width: 75vmin;
   z-index: 1;
   background-color: white;
   color: black;
   left: 12vmin;
-  top: calc(50vh - 65vmin / 2);
+  top: calc(50vh - 50vmin / 2);
 }
 
 #error>* {
@@ -190,15 +194,15 @@ form {
 }
 
 input[type='submit'] {
-  width: 20vmin;
-  background-color: #ba73c9;
-  color: black;
+  background: #1e352f;
+  color: white;
   border-radius: 2em;
+  border: none;
   margin-top: 0.5em;
-  padding: 0.5em;
-  border: 0.1em solid black;
+  padding: 0.8em;
   font-family: 'Copperplate', fantasy;
   font-size: 0.9em;
+  width: 100%;
 }
 
 .hidden {
@@ -237,9 +241,10 @@ input[type='text'] {
 }
 
 #scan-button {
+  margin-top: 1em;
   padding: 1em;
-  background: white;
-  color: rgb(90, 130, 72);
+  background: #1e352f;
+  color: white;
   border-radius: 2em;
   text-decoration: none;
 }
