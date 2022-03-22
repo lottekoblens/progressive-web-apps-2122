@@ -235,3 +235,11 @@ input[type='text'] {
   color: rgb(90, 130, 72);
   margin-bottom: 1em;
 }
+
+#scan-button {
+  padding: 1em;
+  background: white;
+  color: rgb(90, 130, 72);
+  border-radius: 2em;
+  text-decoration: none;
+}

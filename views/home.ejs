@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('layout/head'); %>
-  </head>
 
-  <body>
-    <header></header>
-    <main>
-      <h1>THINK ABOUT YOUR ALLERGIES</h1>
-      <p>Find the food that fits your diet, by scanning the barcode of the products</p>
-      <a href="/barcode" id="scan-button">
-        Start scanning
-        <img src="./images/barcode.png" />
-      </a>
-      <!-- video for scanning gets in this div -->
-      <div id="scan"></div>
-      <!-- loading icon -->
-      <div class="loading" id="loading"><div class="loading-ring"></div></div>
-      <!-- red line while scanning -->
-      <div id="redLine" class="hidden"></div>
-      <!-- section for info of product -->
-      <section id="result" class="moveToTop">
-        <h2>No product scanned yet.</h2>
-        <img id="product-image" src="" />
-        <h3>Use the scanner to get more information about the product.</h3>
-        <ul></ul>
-        <h3></h3>
-        <ul></ul>
-      </section>
-    </main>
-  </body>
+<head>
+  <%- include('layout/head'); %>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <h1>THINK ABOUT YOUR ALLERGIES</h1>
+    <p>Find the food that fits your diet, by scanning the barcode of the products</p>
+    <a href="/barcode" id="scan-button">
+      Start searching
+    </a>
+    <section id="result" class="moveToTop">
+      <h2>No product searched yet.</h2>
+      <img id="product-image" src="" />
+      <h3>Use the search to get more information about the product.</h3>
+      <ul></ul>
+      <h3></h3>
+      <ul></ul>
+    </section>
+  </main>
+</body>
+
 </html>

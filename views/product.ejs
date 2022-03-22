@@ -21,19 +21,19 @@
                 <ul>
                     <% product.ingredients_text_en.split(', ').forEach(ingredient=> { %>
                     <li>
-                        <%= ingredient %>
+                        - <%= ingredient %>
                     </li>
                     <% }) %>
                 </ul>
             </section>
             <% } %>
-            <% if(product.ingredients_text_en) { %>
+            <% if(product.allergens_imported) { %>
             <section>
                 <h3>Allergies:</h3>
                 <ul>
                     <% product.allergens_imported.split(', ').forEach(allergen=> { %>
                     <li>
-                        <%= allergen %>
+                        - <%= allergen %>
                     </li>
                     <% }) %>
                 </ul>

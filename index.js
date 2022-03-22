@@ -1,16 +1,16 @@
 const express = require(`express`);
 const app = express();
-const port = 3000;
+const port = 3333;
 const fetch = require('node-fetch');
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.get('/barcode', async (req, res) => {
+app.get('/barcode', (req, res) => {
   res.render('barcode');
 });
 
