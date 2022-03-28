@@ -36,3 +36,12 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });
+
+// if (!('serviceWorker' in navigator)) {
+//   console.log('sw not supported');
+//   return;
+// }
+// navigator.serviceWorker.register('/service-worker.js')
+// .then(function(registration){
+//   console.log('SW registered, scope is:', registration.scope)
+// })
