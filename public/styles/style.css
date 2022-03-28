@@ -179,7 +179,7 @@ li {
   z-index: 1;
   background-color: white;
   color: black;
-  left: 12vmin;
+  left: calc(50vw - 75vmin / 2);
   top: calc(50vh - 50vmin / 2);
 }
 
