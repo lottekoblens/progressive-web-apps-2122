@@ -1,85 +1,54 @@
-// const CORE = 'core-cache';
-// const CORE_FILES = [
-//     '/styles/style.css',
-//     '/main.js'
-// ]
-
-// self.addEventListener('install', function (event) {
-//     event.waitUntil(
-//         caches.open(CORE).then(function (cache) {
-//             return cache.addAll(CORE_FILES);
-//         })
-//     )
-//     console.log("[serviceWorker] is installed");
-// })
-
-// self.addEventListener('activate', function (event) {
-//     console.log("[serviceWorker] Activated");
-// })
-
-// self.addEventListener('fetch', function (event) {
-//     console.log('hoi')
-//     event.respondWith(
-//         caches.open(CORE).then(function (cache) {
-//             return cache.match(event.request).then(function (response) {
-//                 return response || fetch(event.request).then(function (response) {
-//                     cache.put(event.request, response.clone());
-//                     return response;
-//                 });
-//             });
-//         })
-//     );
-// });
-
-
-const CORE_CACHE_VERSION = 'v2'
-const CORE_ASSETS = [
+const CACHE_VERSION = 'v2'
+const CACHE_FILES = [
     '/styles/style.css',
     '/main.js',
-    '/offline'
+    '/offline',
+    '/images/background.jpeg'
 ]
 
 self.addEventListener('install', event => {
     console.log('Installing service worker')
 
     event.waitUntil(
-        caches.open(CORE_CACHE_VERSION).then(function (cache) {
-            return cache.addAll(CORE_ASSETS).then(() => self.skipWaiting());
+        caches.open(CACHE_VERSION).then((cache) => {
+            return cache.addAll(CACHE_FILES).then(() => self.skipWaiting());
+            // with self.skipWaiting we make sure that with an update of the serviceWorker the newest version is used
         })
     );
 });
 
 self.addEventListener('activate', event => {
     console.log('Activating service worker')
-    event.waitUntil(clients.claim());
+    // event.waitUntil(clients.claim());
 });
 
 self.addEventListener('fetch', event => {
     console.log('Fetch event: ', event.request.url);
     if (isCoreGetRequest(event.request)) {
         console.log('Core get request: ', event.request.url);
-        // cache only strategy
+        // open cache version and check if event.request.url has a match
+        // if there is a match, then it will be returned
+        // this is for the css and js files and for the background image
         event.respondWith(
-            caches.open(CORE_CACHE_VERSION)
+            caches.open(CACHE_VERSION)
             .then(cache => cache.match(event.request.url))
         )
     } else if (isHtmlGetRequest(event.request)) {
         console.log('html get request', event.request.url)
-        // generic fallback
+        // get html files that are in catch, otherwise render offline page
         event.respondWith(
-
             caches.open('html-cache')
             .then(cache => cache.match(event.request.url))
             .then(response => response ? response : fetchAndCache(event.request, 'html-cache'))
             .catch(e => {
-                return caches.open(CORE_CACHE_VERSION)
+                return caches.open(CACHE_VERSION)
                     .then(cache => cache.match('/offline'))
             })
         )
     }
 });
 
-function fetchAndCache(request, cacheName) {
+const fetchAndCache = (request, cacheName) => {
     return fetch(request)
         .then(response => {
             if (!response.ok) {
@@ -93,16 +62,17 @@ function fetchAndCache(request, cacheName) {
 }
 
 
-function isHtmlGetRequest(request) {
-    return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').indexOf('text/html') > -1);
+const isHtmlGetRequest = (request) => {
+    return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').includes('text/html'));
 }
 
 
-function isCoreGetRequest(request) {
-    return request.method === 'GET' && CORE_ASSETS.includes(getPathName(request.url));
+const isCoreGetRequest = (request) => {
+    return request.method === 'GET' && CACHE_FILES.includes(getPathName(request.url));
+    // only return the files that are in the CACHE_FILES
 }
 
-function getPathName(requestUrl) {
+const getPathName = (requestUrl) => {
     const url = new URL(requestUrl);
     return url.pathname;
 }
