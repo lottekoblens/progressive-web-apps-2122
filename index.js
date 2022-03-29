@@ -49,6 +49,10 @@ app.get('/product/:barcode', async (req, res) => {
     });
 });
 
+app.get('/offline', (req, res) => {
+  res.render('offline')
+})
+
 app.use((req, res) => {
   res.status(404).send('Sorry, deze pagina kon ik niet vinden.');
 });

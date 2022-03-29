@@ -59,7 +59,7 @@ export const detect = async () => {
             barcodeValue = barcode.rawValue; // rawValue is a string decoded from the barcode data
             video.pause();
             video.remove();
-            window.location.href = '/product/' + barcodeValue; // put the barcodeValue in the window.location.hash
+            window.location.href = '/product/' + barcodeValue; // put the barcodeValue in the window.location.href
             scanLine.classList.add('hidden');
             // activateButton();
           }
