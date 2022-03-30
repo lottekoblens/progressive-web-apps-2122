@@ -10,14 +10,14 @@ Entree | Scan | Product
 * [Demo](https://github.com/lottekoblens/progressive-web-apps-2122#computer-demo)
 * [Concept](https://github.com/lottekoblens/progressive-web-apps-2122#bulb-concept)
 * [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
-* [Data](https://github.com/lottekoblens/foodchecker#file_folder-data)
-* [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
-* [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
-* [Installation](https://github.com/lottekoblens/foodchecker#wrench-installation)
-* [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
-* [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
-* [Resources](https://github.com/lottekoblens/foodchecker#open_file_folder-resources)
-* [License](https://github.com/lottekoblens/foodchecker#bookmark-license)
+* [Data](https://github.com/lottekoblens/progressive-web-apps-2122#file_folder-data)
+* [Assessment](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-assessment)
+* [Rubric](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-rubric)
+* [Installation](https://github.com/lottekoblens/progressive-web-apps-2122#wrench-installation)
+* [Process](https://github.com/lottekoblens/progressive-web-apps-2122#chart_with_upwards_trend-process)
+* [Wishlist](https://github.com/lottekoblens/progressive-web-apps-2122#pencil-wishlist)
+* [Resources](https://github.com/lottekoblens/progressive-web-apps-2122#open_file_folder-resources)
+* [License](https://github.com/lottekoblens/progressive-web-apps-2122#bookmark-license)
 
 ## :computer: Demo
 
