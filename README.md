@@ -7,7 +7,7 @@ Entree | Scan | Product
 ![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) |  ![Scan page](https://github.com/lottekoblens/foodchecker/blob/main/images/scan-page.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
 
 ## :bookmark_tabs: Table of contents
-* [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
+* [Demo](https://github.com/lottekoblens/progressive-web-apps-2122#computer-demo)
 * [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
 * [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
 * [Data](https://github.com/lottekoblens/foodchecker#file_folder-data)
