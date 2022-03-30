@@ -87,5 +87,5 @@ There are a few things I haven't done (because of a lack of time), but I wanted 
 
 ## :bookmark: License
 
-This repository has the [MIT]() license.
+This repository has the [MIT](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/LICENSE) license.
 
