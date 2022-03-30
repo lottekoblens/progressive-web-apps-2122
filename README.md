@@ -9,7 +9,7 @@ Entree | Scan | Product
 ## :bookmark_tabs: Table of contents
 * [Demo](https://github.com/lottekoblens/progressive-web-apps-2122#computer-demo)
 * [Concept](https://github.com/lottekoblens/progressive-web-apps-2122#bulb-concept)
-* [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
+* [Features](https://github.com/lottekoblens/progressive-web-apps-2122#high_brightness-features)
 * [Data](https://github.com/lottekoblens/progressive-web-apps-2122#file_folder-data)
 * [Assessment](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-rubric)
