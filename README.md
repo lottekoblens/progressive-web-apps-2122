@@ -4,7 +4,7 @@ Make sure you don't eat food that you can't eat because of your allergies.
 
 Entree | Scan | Product
 :-------------------------:|:-------------------------:|:-------------------------:
-![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) |  ![Scan page](https://github.com/lottekoblens/foodchecker/blob/main/images/scan-page.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
+![Landing page]() |  ![Scan page]() | ![Product page]()
 
 ## :bookmark_tabs: Table of contents
 * [Demo](https://github.com/lottekoblens/progressive-web-apps-2122#computer-demo)
