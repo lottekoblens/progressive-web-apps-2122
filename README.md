@@ -1,24 +1,91 @@
-# Progressive web apps
+# Progressive web apps: Foodchecker
 
-## Table of contents
+Make sure you don't eat food that you can't eat because of your allergies.
 
-## Exercises
+Entree | Scan | Product
+:-------------------------:|:-------------------------:|:-------------------------:
+![Landing page](https://github.com/lottekoblens/foodchecker/blob/main/images/home.png) |  ![Scan page](https://github.com/lottekoblens/foodchecker/blob/main/images/scan-page.png) | ![Product page](https://github.com/lottekoblens/foodchecker/blob/main/images/product.png)
 
-### Exercise 1
+## :bookmark_tabs: Table of contents
+* [Demo](https://github.com/lottekoblens/foodchecker#computer-demo)
+* [Concept](https://github.com/lottekoblens/foodchecker#bulb-concept)
+* [Features](https://github.com/lottekoblens/foodchecker#high_brightness-features)
+* [Data](https://github.com/lottekoblens/foodchecker#file_folder-data)
+* [Assessment](https://github.com/lottekoblens/foodchecker#clipboard-assessment)
+* [Rubric](https://github.com/lottekoblens/foodchecker#clipboard-rubric)
+* [Installation](https://github.com/lottekoblens/foodchecker#wrench-installation)
+* [Process](https://github.com/lottekoblens/foodchecker#chart_with_upwards_trend-process)
+* [Wishlist](https://github.com/lottekoblens/foodchecker#pencil-wishlist)
+* [Resources](https://github.com/lottekoblens/foodchecker#open_file_folder-resources)
+* [License](https://github.com/lottekoblens/foodchecker#bookmark-license)
 
-1. Installed node.js
-2. Installed express
-3. Tested server by getting Hello world on page
-4. Putting WAFS project in public folder
-5. Rendering WAFS project with ``` app.use(express.static('public')); ```
+## :computer: Demo
 
-### Exercise 2
+[Live demo]()
 
-1. Searching for nodemon package 
-2. Installing nodemon
-3. Write script for nodemon:
-``` "scripts": {
-    "test": "test",
-    "start": "nodemon index.js"
-  }, 
-  ```
+<img src="" width="300">
+
+## :bulb: Concept
+
+
+## :high_brightness: Features
+
+* Scan a product -> get information about that product
+* Search a product with the barcode -> get information about that product
+* When barcode is not found -> given feedback that it's not found
+
+## :file_folder: Data 
+
+The data that is used in this project comes from world.openfoodfacts.org. To get information about a product, a fetch is done with the barcode of the product in the url. So the fetch url looks something like this: 
+
+``` `https://world.openfoodfacts.org/api/v0/product/'${barcode}.json` ```
+
+The ${barcode} is a dynamic value. It's get from the barcode scanner or from the value the user fills in in the search input field.
+
+## :clipboard: Assessment
+
+This is the assignment: 'Design and build a Single Page Web App based on a User Story.' 
+
+The user story that I've chosen is as follows: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet._
+
+### :clipboard: Rubric
+
+![Rubric](https://github.com/lottekoblens/foodchecker/blob/main/images/Rubric.png)
+
+## :wrench: Installation
+
+1. Clone this repository by putting this in your terminal:
+
+`git clone `
+
+2. Install the project by putting in the following in the terminal:
+
+`npm install`
+
+3. Run the project by putting this in the terminal:
+
+`npm start`
+
+## :chart_with_upwards_trend: Process
+
+If you want to know more about my process, you can read it [here]().
+
+## :pencil: Wishlist
+
+There are a few things I haven't done (because of a lack of time), but I wanted to do in this project:
+
+
+
+## :open_file_folder: Resources
+
+* Bongers, C. (2021, 29 april). Detecting barcodes from the webcam. Daily Dev Tips. Geraadpleegd op 14 februari 2022, van https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
+* mdn web docs. (2022c, februari 18). Fetch API - Web APIs | MDN. Geraadpleegd op 15 februari 2022, van https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+* Open Food Facts. (z.d.). Open Food Facts - World. Geraadpleegd op 14 februari 2022, van https://world.openfoodfacts.org/
+* W3 Schools. (z.d.). HTML DOM Element innerHTML Property. Geraadpleegd op 1 maart 2022, van https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+* Routie | Javascript hash router. (z.d.). Routie. Geraadpleegd op 2 maart 2022, van http://projects.jga.me/routie/
+* Java T Point. (z.d.). JavaScript reset - javatpoint. Www.Javatpoint.Com. Geraadpleegd op 9 maart 2022, van https://www.javatpoint.com/javascript-reset#:%7E:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value.
+
+## :bookmark: License
+
+This repository has the [MIT]() license.
+
