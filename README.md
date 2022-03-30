@@ -68,7 +68,7 @@ The user story that I've chosen is as follows: _'As a foodie, I want to be able 
 
 ## :chart_with_upwards_trend: Process
 
-If you want to know more about my process, you can read it [here]().
+If you want to know more about my process, you can read it [here](https://github.com/lottekoblens/progressive-web-apps-2122/wiki/Exercises).
 
 ## :pencil: Wishlist
 
