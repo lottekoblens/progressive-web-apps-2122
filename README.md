@@ -56,7 +56,7 @@ The user story that I've chosen is as follows: _'As a foodie, I want to be able 
 
 1. Clone this repository by putting this in your terminal:
 
-`git clone `
+`git clone https://github.com/lottekoblens/progressive-web-apps-2122.git`
 
 2. Install the project by putting in the following in the terminal:
 
