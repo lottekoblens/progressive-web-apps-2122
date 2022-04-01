@@ -218,15 +218,15 @@ input[type='submit'] {
 
 @keyframes scanning {
   0% {
-    top: 45%;
+    top: 15%;
   }
 
   50% {
-    top: 70%;
+    top: 40%;
   }
 
   100% {
-    top: 45%;
+    top: 15%;
   }
 }
 
