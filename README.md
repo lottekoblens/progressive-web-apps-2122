@@ -27,6 +27,8 @@ Entree | Scan | Product
 
 ## :bulb: Concept
 
+This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
+So the app makes it easier for the user to find out if a product contains something they are allergic to. They scan the barcode of the product and the information of the product comes forward. 
 
 ## :high_brightness: Features
 
