@@ -46,9 +46,7 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 
 ## :clipboard: Assessment
 
-This is the assignment: 'Design and build a Single Page Web App based on a User Story.' 
-
-The user story that I've chosen is as follows: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet._
+In this course we convert the client side web application, made during the Web App From Scratch course, into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Finally we’ll implement a series of optimisations to improve the performance of the application.
 
 ### :clipboard: Rubric
 
