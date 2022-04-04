@@ -50,7 +50,7 @@ In this course we convert the client side web application, made during the Web A
 
 ### :clipboard: Rubric
 
-![Rubric](https://github.com/lottekoblens/foodchecker/blob/main/images/Rubric.png)
+![Rubric](hhttps://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/Rubric.png)
 
 ## :wrench: Installation
 
