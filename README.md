@@ -23,8 +23,6 @@ Entree | Scan | Search | Product
 
 [Live demo]()
 
-<img src="" width="300">
-
 ## :bulb: Concept
 
 This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
