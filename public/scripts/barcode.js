@@ -1,14 +1,10 @@
 import {
-  deleteInvalidText
-} from './error.js';
-import {
   fetchWithBarcode
 } from './fetch.js';
 import {
   clearHash
 } from './router.js';
 import {
-  activateButton,
   loadingState
 } from './ui.js';
 import {
@@ -23,7 +19,6 @@ export const detect = async () => {
   const divScan = document.getElementById('scan');
 
   clearHash();
-  // deleteInvalidText();
 
   const barcodeDetector = new BarcodeDetector();
   let mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -61,7 +56,6 @@ export const detect = async () => {
             video.remove();
             window.location.href = '/product/' + barcodeValue; // put the barcodeValue in the window.location.href
             scanLine.classList.add('hidden');
-            // activateButton();
           }
         });
       })

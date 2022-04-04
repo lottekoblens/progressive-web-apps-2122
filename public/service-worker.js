@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v2'
+const CACHE_VERSION = 'v3'
 const CACHE_FILES = [
     '/styles/style.css',
     '/main.js',
@@ -33,7 +33,7 @@ self.addEventListener('fetch', event => {
             caches.open(CACHE_VERSION)
             .then(cache => cache.match(event.request.url))
         )
-    } else if (isHtmlGetRequest(event.request)) {
+    } else if (isHtmlGetRequest(event.request) && !scanPage(event.request)) {
         console.log('html get request', event.request.url)
         // get html files that are in catch, otherwise render offline page
         event.respondWith(
@@ -77,4 +77,8 @@ const isCoreGetRequest = (request) => {
 const getPathName = (requestUrl) => {
     const url = new URL(requestUrl);
     return url.pathname;
+}
+
+const scanPage = (request) => {
+    return getPathName(request.url) == '/scan'
 }

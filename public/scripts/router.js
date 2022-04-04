@@ -1,4 +1,6 @@
-import { renderProduct } from './barcode.js';
+import {
+  renderProduct
+} from './barcode.js';
 import './vendor/routie.min.js';
 
 export const handleRoutes = () => {

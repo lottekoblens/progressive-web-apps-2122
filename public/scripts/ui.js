@@ -1,4 +1,6 @@
-import { detect } from './barcode.js';
+import {
+  detect
+} from './barcode.js';
 
 export const scanButton = () => {
   const button = document.getElementById('scan-button');

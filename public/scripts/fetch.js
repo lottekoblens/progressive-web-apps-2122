@@ -1,7 +1,19 @@
-import { showProduct } from './product.js';
-import { errorState, stopErrorState } from './error.js';
-import { activateButton, disableButton, emptyContent, resetForm } from './ui.js';
-import { removeLoadingState } from './ui.js';
+import {
+  showProduct
+} from './product.js';
+import {
+  errorState,
+  stopErrorState
+} from './error.js';
+import {
+  activateButton,
+  disableButton,
+  emptyContent,
+  resetForm
+} from './ui.js';
+import {
+  removeLoadingState
+} from './ui.js';
 
 export const fetchWithBarcode = (barcodeValue) => {
   let barcode = barcodeValue;

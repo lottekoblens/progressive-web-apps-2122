@@ -8,7 +8,10 @@ export const showProduct = (data) => {
   const result = document.getElementById('result');
 
   result.classList.remove('moveToTop');
-  result.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  result.scrollIntoView({
+    block: 'center',
+    behavior: 'smooth'
+  });
 
   // product name
   if (data.product.product_name) {

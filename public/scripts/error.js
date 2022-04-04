@@ -1,4 +1,6 @@
-import { detect } from './barcode.js';
+import {
+  detect
+} from './barcode.js';
 
 // Search for product with the value the user puts in the input field
 export const errorState = (data) => {
