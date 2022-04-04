@@ -188,7 +188,7 @@ li {
 
 #error {
   position: absolute;
-  height: 50vmin;
+  height: fit-content;
   width: 75vmin;
   z-index: 1;
   background-color: white;

@@ -62,6 +62,8 @@ const fetchAndCache = (request, cacheName) => {
 }
 
 
+// HELPERS
+
 const isHtmlGetRequest = (request) => {
     return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').includes('text/html'));
 }
