@@ -33,18 +33,19 @@ self.addEventListener('fetch', event => {
             caches.open(CACHE_VERSION)
             .then(cache => cache.match(event.request.url))
         )
-    } else if (isHtmlGetRequest(event.request) && !scanPage(event.request)) {
-        console.log('html get request', event.request.url)
-        // get html files that are in catch, otherwise render offline page
-        event.respondWith(
-            caches.open('html-cache')
-            .then(cache => cache.match(event.request.url))
-            .then(response => response ? response : fetchAndCache(event.request, 'html-cache'))
-            .catch(e => {
-                return caches.open(CACHE_VERSION)
-                    .then(cache => cache.match('/offline'))
-            })
-        )
+    }
+    if (isHtmlGetRequest(event.request)) {
+        if (!isBarcodeOrSearchPage(event.request)) {
+            event.respondWith(
+                caches.open(HTML_CACHE)
+                .then(cache => cache.match(event.request.url))
+                .then(response => response ? response : fetchAndCache(event.request))
+                .catch(e => {
+                    return caches.open(CACHE)
+                        .then(cache => cache.match('/offline'))
+                })
+            )
+        }
     }
 });
 
@@ -79,6 +80,6 @@ const getPathName = (requestUrl) => {
     return url.pathname;
 }
 
-const scanPage = (request) => {
-    return getPathName(request.url) == '/scan'
+const isBarcodeOrSearchPage = (request) => {
+    return getPathName(request.url) === '/scan' || getPathName(request.url) === '/search'
 }

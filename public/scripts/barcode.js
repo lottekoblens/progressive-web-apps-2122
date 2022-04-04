@@ -4,12 +4,12 @@
 // import {
 //   clearHash
 // } from './router.js';
-// import {
-//   loadingState
-// } from './ui.js';
-// import {
-//   removeLoadingState
-// } from './ui.js';
+import {
+  loadingState
+} from './ui.js';
+import {
+  removeLoadingState
+} from './ui.js';
 
 export const detect = async () => {
   const scanLine = document.getElementById('redLine');
@@ -18,7 +18,6 @@ export const detect = async () => {
   const video = document.createElement('video'); // create a html element video
   const divScan = document.getElementById('scan');
 
-  clearHash();
 
   const barcodeDetector = new BarcodeDetector();
   let mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -69,9 +68,9 @@ export const detect = async () => {
   renderLoop();
 };
 
-export const renderProduct = (barcodeHash) => {
-  loadingState();
-  fetchWithBarcode(barcodeHash); // give barcodeHash to the function fetchWithBarcode and run that function
-};
+// export const renderProduct = (barcodeHash) => {
+//   loadingState();
+//   fetchWithBarcode(barcodeHash); // give barcodeHash to the function fetchWithBarcode and run that function
+// };
 
 // source barcode scanner: https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
