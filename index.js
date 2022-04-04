@@ -22,7 +22,7 @@ app.get('/product', async (req, res) => {
   await fetch(`https://world.openfoodfacts.org/api/v0/product/${req.query.query}.json`)
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data)
+
       if (data.status == 1) {
         res.render('product', {
           product: data.product
@@ -38,7 +38,7 @@ app.get('/product/:barcode', async (req, res) => {
   await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data)
+      console.log(data)
       if (data.status == 1) {
         res.render('product', {
           product: data.product

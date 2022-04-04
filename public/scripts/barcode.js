@@ -1,15 +1,15 @@
-import {
-  fetchWithBarcode
-} from './fetch.js';
-import {
-  clearHash
-} from './router.js';
-import {
-  loadingState
-} from './ui.js';
-import {
-  removeLoadingState
-} from './ui.js';
+// import {
+//   fetchWithBarcode
+// } from './fetch.js';
+// import {
+//   clearHash
+// } from './router.js';
+// import {
+//   loadingState
+// } from './ui.js';
+// import {
+//   removeLoadingState
+// } from './ui.js';
 
 export const detect = async () => {
   const scanLine = document.getElementById('redLine');
