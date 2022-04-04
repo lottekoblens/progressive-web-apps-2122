@@ -51,7 +51,7 @@ In this course we convert the client side web application, made during the Web A
 
 ### :clipboard: Rubric
 
-![Rubric](hhttps://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/Rubric.png)
+![Rubric](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/Rubric.png)
 
 ## :wrench: Installation
 
