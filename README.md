@@ -2,9 +2,9 @@
 
 Make sure you don't eat food that you can't eat because of your allergies.
 
-Entree | Scan | Product
-:-------------------------:|:-------------------------:|:-------------------------:
-![Landing page]() |  ![Scan page]() | ![Product page]()
+Entree | Scan | Search | Product
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![Homepage](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/home-mobile.png) |  ![Scan page](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/scan-mobile.png) | ![Search page](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/search-mobile.png) | ![Product page](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/product-mobile.png)
 
 ## :bookmark_tabs: Table of contents
 * [Demo](https://github.com/lottekoblens/progressive-web-apps-2122#computer-demo)
@@ -22,8 +22,6 @@ Entree | Scan | Product
 ## :computer: Demo
 
 [Live demo]()
-
-<img src="" width="300">
 
 ## :bulb: Concept
 
