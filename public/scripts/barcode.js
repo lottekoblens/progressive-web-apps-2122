@@ -1,9 +1,3 @@
-// import {
-//   fetchWithBarcode
-// } from './fetch.js';
-// import {
-//   clearHash
-// } from './router.js';
 import {
   loadingState
 } from './ui.js';
@@ -67,10 +61,5 @@ export const detect = async () => {
   };
   renderLoop();
 };
-
-// export const renderProduct = (barcodeHash) => {
-//   loadingState();
-//   fetchWithBarcode(barcodeHash); // give barcodeHash to the function fetchWithBarcode and run that function
-// };
 
 // source barcode scanner: https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/

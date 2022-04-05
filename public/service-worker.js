@@ -19,7 +19,6 @@ self.addEventListener('install', event => {
 
 self.addEventListener('activate', event => {
     console.log('Activating service worker')
-    // event.waitUntil(clients.claim());
 });
 
 self.addEventListener('fetch', event => {
@@ -37,7 +36,7 @@ self.addEventListener('fetch', event => {
     if (isHtmlGetRequest(event.request)) {
         if (!isBarcodeOrSearchPage(event.request)) {
             event.respondWith(
-                caches.open(HTML_CACHE)
+                caches.open('html_cache')
                 .then(cache => cache.match(event.request.url))
                 .then(response => response ? response : fetchAndCache(event.request))
                 .catch(e => {
@@ -49,15 +48,19 @@ self.addEventListener('fetch', event => {
     }
 });
 
-const fetchAndCache = (request, cacheName) => {
+const fetchAndCache = (request) => {
     return fetch(request)
         .then(response => {
-            if (!response.ok) {
-                throw new TypeError('Bad response status');
-            }
+            // if (!response.ok) {
+            //     throw new TypeError('Bad response status');
+            // }
 
             const clone = response.clone()
-            caches.open(cacheName).then((cache) => cache.put(request, clone))
+            caches.open('html_cache').then((cache) => {
+                if (response.type === 'basic') {
+                    cache.put(request, clone)
+                }
+            })
             return response
         })
 }
