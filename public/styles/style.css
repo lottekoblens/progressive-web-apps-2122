@@ -1,8 +1,14 @@
 body {
   background: #7ea76c;
-  background-image: url('../images/background.jpeg');
+  /* background-image: url('../images/background.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%; */
+  background: url('../images/background.jpeg') no-repeat center fixed;
+  background-position: 0;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
   font-family: 'Copperplate', fantasy;
   scroll-behavior: smooth;
   height: 100vh;
@@ -28,6 +34,10 @@ main>h1>a {
   text-decoration: none;
   color: #1e352f;
   cursor: pointer;
+}
+
+main>a {
+  color: #1e352f;
 }
 
 img {

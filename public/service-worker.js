@@ -1,6 +1,7 @@
 const CACHE_VERSION = 'v3'
 const HTML_CACHE = 'v1_html'
 const CACHE_FILES = [
+    '/',
     '/styles/style.css',
     '/main.js',
     '/offline',
@@ -54,10 +55,6 @@ self.addEventListener('fetch', (event) => {
 const fetchAndCache = (request) => {
     return fetch(request)
         .then(response => {
-            // if (!response.ok) {
-            //     throw new TypeError('Bad response status');
-            // }
-
             const clone = response.clone()
             caches.open(HTML_CACHE).then((cache) => {
                 if (response.type === 'basic') {

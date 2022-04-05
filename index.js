@@ -5,8 +5,13 @@ const port = 3333;
 const fetch = require('node-fetch');
 
 app.use(express.static('public'));
-// app.use(compression());
+app.use(compression());
 app.set('view engine', 'ejs');
+
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=31536000, immutable');
+  next();
+});
 
 app.get('/', (req, res) => {
   res.render('home');
@@ -20,6 +25,10 @@ app.get('/scan', (req, res) => {
   res.render('scan');
 })
 
+app.get('/noproduct', (req, res) => {
+  res.render('noproduct');
+})
+
 app.get('/product', async (req, res) => {
   await fetch(`https://world.openfoodfacts.org/api/v0/product/${req.query.query}.json`)
     .then((res) => res.json())
@@ -29,7 +38,7 @@ app.get('/product', async (req, res) => {
           product: data.product
         });
       } else {
-        res.redirect('/search');
+        res.redirect('/noproduct');
       }
     });
 });
@@ -45,7 +54,7 @@ app.get('/product/:barcode', async (req, res) => {
           product: data.product
         });
       } else {
-        res.redirect('/search');
+        res.redirect('/noproduct');
       }
     });
 });
