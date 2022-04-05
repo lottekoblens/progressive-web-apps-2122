@@ -30,6 +30,11 @@ main>h1>a {
   cursor: pointer;
 }
 
+img {
+  width: 20em;
+  aspect-ratio: 400 /300;
+}
+
 #buttons {
   display: flex;
   flex-direction: row;
@@ -254,7 +259,8 @@ input[type='text'] {
   margin-bottom: 1em;
 }
 
-#scan-button {
+#scan-button,
+#search-button {
   margin-top: 1em;
   padding: 1em;
   background: #1e352f;

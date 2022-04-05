@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head'); %>
+</head>
+
+<body>
+    <main>
+        <h1><a href="/">THINK ABOUT YOUR ALLERGIES</a></h1>
+        <p>Find the food that fits your diet, by searching on the barcode of the product</p>
+        <!-- popup for search -->
+        <div id="popup">
+            <article id="error">
+                <h3>Product not found</h3>
+                <form method="GET" action="/product">
+                    <label for="searchField">Try searching again by typing in the barcode</label>
+                    <input type="text" id="searchField" name="query" />
+                    <input type="submit" value="Search" />
+                </form>
+                <p id="invalid_code" class="hidden">No product found</p>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -11,16 +11,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// if (!('serviceWorker' in navigator)) {
-//   console.log('sw not supported');
-//   return;
-// }
-// navigator.serviceWorker.register('/service-worker.js')
-// .then(function(registration){
-//   console.log('SW registered, scope is:', registration.scope)
-// })
-
 if (window.location.pathname === '/scan') {
     detect()
-    // barcodeDetector()
 }

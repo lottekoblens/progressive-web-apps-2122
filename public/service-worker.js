@@ -1,4 +1,5 @@
 const CACHE_VERSION = 'v3'
+const HTML_CACHE = 'v1_html'
 const CACHE_FILES = [
     '/styles/style.css',
     '/main.js',
@@ -21,30 +22,32 @@ self.addEventListener('activate', event => {
     console.log('Activating service worker')
 });
 
-self.addEventListener('fetch', event => {
-    console.log('Fetch event: ', event.request.url);
-    if (isCoreGetRequest(event.request)) {
-        console.log('Core get request: ', event.request.url);
-        // open cache version and check if event.request.url has a match
-        // if there is a match, then it will be returned
-        // this is for the css and js files and for the background image
-        event.respondWith(
-            caches.open(CACHE_VERSION)
-            .then(cache => cache.match(event.request.url))
-        )
-    }
+self.addEventListener('fetch', (event) => {
     if (isHtmlGetRequest(event.request)) {
-        if (!isBarcodeOrSearchPage(event.request)) {
+        if (!isBarcodePage(event.request)) {
             event.respondWith(
-                caches.open('html_cache')
+                caches.open(HTML_CACHE)
                 .then(cache => cache.match(event.request.url))
                 .then(response => response ? response : fetchAndCache(event.request))
                 .catch(e => {
-                    return caches.open(CACHE)
+                    return caches.open(CACHE_VERSION)
+                        .then(cache => cache.match('/offline'))
+                })
+            )
+        } else {
+            event.respondWith(
+                fetch(event.request)
+                .catch(e => {
+                    return caches.open(CACHE_VERSION)
                         .then(cache => cache.match('/offline'))
                 })
             )
         }
+    } else if (isCoreGetRequest(event.request)) {
+        event.respondWith(
+            caches.open(CACHE_VERSION)
+            .then(cache => cache.match(event.request.url))
+        )
     }
 });
 
@@ -56,7 +59,7 @@ const fetchAndCache = (request) => {
             // }
 
             const clone = response.clone()
-            caches.open('html_cache').then((cache) => {
+            caches.open(HTML_CACHE).then((cache) => {
                 if (response.type === 'basic') {
                     cache.put(request, clone)
                 }
@@ -83,6 +86,6 @@ const getPathName = (requestUrl) => {
     return url.pathname;
 }
 
-const isBarcodeOrSearchPage = (request) => {
-    return getPathName(request.url) === '/scan' || getPathName(request.url) === '/search'
+const isBarcodePage = (request) => {
+    return getPathName(request.url) === '/scan'
 }
