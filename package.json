@@ -7,6 +7,9 @@
     "doc": "docs",
     "example": "examples"
   },
+  "engines": {
+    "node": "17.7.2"
+  },
   "scripts": {
     "test": "test",
     "start": "nodemon index.js"
