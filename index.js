@@ -1,7 +1,8 @@
 const compression = require('compression');
 const express = require(`express`);
+const env = require('dotenv')
 const app = express();
-const port = 3333;
+const PORT = process.env.PORT || 3333;
 const fetch = require('node-fetch');
 
 app.use(express.static('public'));
@@ -67,6 +68,6 @@ app.use((req, res) => {
   res.status(404).send('Sorry, deze pagina kon ik niet vinden.');
 });
 
-app.listen(port, () => {
-  console.log(`Listening on port: ${port}`);
+app.listen(PORT, () => {
+  console.log(`Listening on port: ${PORT}`);
 });
