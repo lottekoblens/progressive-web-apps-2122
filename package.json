@@ -7,9 +7,6 @@
     "doc": "docs",
     "example": "examples"
   },
-  "engines": {
-    "node": "17.7.2"
-  },
   "scripts": {
     "test": "test",
     "start": "nodemon index.js"
@@ -33,5 +30,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "17.7.2"
   }
 }
