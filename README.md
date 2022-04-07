@@ -9,6 +9,7 @@ Entree | Scan | Search | Product
 ## :bookmark_tabs: Table of contents
 * [Demo](https://github.com/lottekoblens/progressive-web-apps-2122#computer-demo)
 * [Concept](https://github.com/lottekoblens/progressive-web-apps-2122#bulb-concept)
+* [Activity Diagram](https://github.com/lottekoblens/progressive-web-apps-2122#activity-diagram)
 * [Features](https://github.com/lottekoblens/progressive-web-apps-2122#high_brightness-features)
 * [Data](https://github.com/lottekoblens/progressive-web-apps-2122#file_folder-data)
 * [Assessment](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-assessment)
@@ -27,6 +28,10 @@ Entree | Scan | Search | Product
 
 This web app fits the following user story: _'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'_
 So the app makes it easier for the user to find out if a product contains something they are allergic to. They scan the barcode of the product and the information of the product comes forward. When the user doesn't have internet, a custom offline page will be displayed.
+
+## Activity Diagram
+
+<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/activitydiagram-pwa.png" width="600">
 
 ## :high_brightness: Features
 
