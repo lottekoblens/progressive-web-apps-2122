@@ -73,7 +73,7 @@ If you want to know more about my process, you can read it [here](https://github
 
 There are a few things I haven't done (because of a lack of time), but I wanted to do in this project:
 
-
+* Give the user the option to save a product and add these pages to the cache so that these specific pages can be shown when the user is offline
 
 ## :open_file_folder: Resources
 
