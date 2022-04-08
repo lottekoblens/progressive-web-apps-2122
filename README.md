@@ -12,6 +12,9 @@ Entree | Scan | Search | Product | Offline
 * [Activity Diagram](https://github.com/lottekoblens/progressive-web-apps-2122#activity-diagram)
 * [Features](https://github.com/lottekoblens/progressive-web-apps-2122#high_brightness-features)
 * [Data](https://github.com/lottekoblens/progressive-web-apps-2122#file_folder-data)
+* [Job Story - Service worker](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#job-story---service-worker)
+* [Exercises](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#exercises)
+* [Optimizations (critical render path)](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#optimizations-critical-render-path)
 * [Assessment](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-rubric)
 * [Installation](https://github.com/lottekoblens/progressive-web-apps-2122#wrench-installation)
@@ -31,7 +34,7 @@ So the app makes it easier for the user to find out if a product contains someth
 
 ## Activity Diagram
 
-<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/activitydiagram-pwa-final.png" width="600">
+<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/final-activitydiagram.png" width="600">
 
 ## :high_brightness: Features
 
@@ -50,7 +53,36 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 
 ## Job Story - Service Worker
 
-* If I have looked up or scanned a product, I want this product to be stored in the cache so that I can view it when I'm online.
+* If I have looked up or scanned a product, I want this product to be stored in the cache so that I can view it when I'm offline.
+* The homepage and search page should work offline, so that I can search the product again that I searched for when I was online.
+
+[More about the service worker](https://github.com/lottekoblens/progressive-web-apps-2122/wiki/Service-worker)
+
+## Exercises
+
+During this project we got some exercises. How I completed the exercises can be found [here](https://github.com/lottekoblens/progressive-web-apps-2122/wiki/Exercises).
+
+## Optimizations (critical render path)
+
+I optimized a couple of things:
+
+* Compression: I installed the package 'compression' and applied it to my progressive web app
+* Caching headers set: I have set the caching headers
+```js
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=31536000, immutable');
+  next();
+```
+* Responsive images
+```ejs
+<img src=<%=product.image_url %>
+  srcset="
+    <%= product.image_url %> 800w,
+    <%= product.image_small_url %> 400w,
+    <%= product.image_thumb_url %> 200w"
+alt="Product image">
+```
+* Aspect ratio and width images: to improve performance I had to set a width and height for the images. So I gave the image on the product page a width and an aspect ratio and the performance went up enormously as a result.
 
 ## :clipboard: Assessment
 
