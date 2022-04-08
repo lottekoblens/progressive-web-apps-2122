@@ -84,6 +84,8 @@ alt="Product image">
 ```
 * Aspect ratio and width images: to improve performance I had to set a width and height for the images. So I gave the image on the product page a width and an aspect ratio and the performance went up enormously as a result.
 
+These optimizations have therefore ensured that the performance of the app has improved.
+
 ## :clipboard: Assessment
 
 In this course we convert the client side web application, made during the Web App From Scratch course, into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Finally we’ll implement a series of optimisations to improve the performance of the application.
