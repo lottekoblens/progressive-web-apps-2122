@@ -31,7 +31,7 @@ So the app makes it easier for the user to find out if a product contains someth
 
 ## Activity Diagram
 
-<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/activitydiagram-pwa.png" width="600">
+<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/activitydiagram-pwa-final.png" width="600">
 
 ## :high_brightness: Features
 
