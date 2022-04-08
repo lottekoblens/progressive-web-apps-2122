@@ -50,7 +50,7 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 
 ## Job Story - Service Worker
 
-* If I have looked up or scanned a product, I want this product to be saved so that I can view it when I'm online.
+* If I have looked up or scanned a product, I want this product to be stored in the cache so that I can view it when I'm online.
 
 ## :clipboard: Assessment
 
