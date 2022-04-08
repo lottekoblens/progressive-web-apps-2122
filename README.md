@@ -12,7 +12,7 @@ Entree | Scan | Search | Product | Offline
 * [Activity Diagram](https://github.com/lottekoblens/progressive-web-apps-2122#activity-diagram)
 * [Features](https://github.com/lottekoblens/progressive-web-apps-2122#high_brightness-features)
 * [Data](https://github.com/lottekoblens/progressive-web-apps-2122#file_folder-data)
-* [Job Story - Service worker]()
+* [Job Story - Service worker](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#job-story---service-worker)
 * [Exercises]()
 * [Optimizations (critical render path)]()
 * [Assessment](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-assessment)
