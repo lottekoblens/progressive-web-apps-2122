@@ -56,7 +56,7 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 * If I have looked up or scanned a product, I want this product to be stored in the cache so that I can view it when I'm offline.
 * The homepage and search page should work offline, so that I can search the product again that I searched for when I was online.
 
-[More about the service worker]()
+[More about the service worker](https://github.com/lottekoblens/progressive-web-apps-2122/wiki/Service-worker)
 
 ## Exercises
 
