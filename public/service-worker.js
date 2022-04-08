@@ -28,8 +28,8 @@ self.addEventListener('fetch', (event) => {
         if (!isBarcodePage(event.request)) {
             // only if the url is from a HTML page and is not the barcode page the code below will be executed
             event.respondWith(
-                caches.open(HTML_CACHE)
-                .then(cache => cache.match(event.request.url))
+                caches.open(HTML_CACHE) // open the HTML_CACHE
+                .then(cache => cache.match(event.request.url)) // look if the event.request matches a event.request.url in the cache 
                 .then(response => response ? response : fetchAndCache(event.request))
                 .catch(e => {
                     return caches.open(CACHE_VERSION)
@@ -49,6 +49,7 @@ self.addEventListener('fetch', (event) => {
         event.respondWith(
             caches.open(CACHE_VERSION)
             .then(cache => cache.match(event.request.url))
+            // give page that matches a url that is in the cache storage
         )
     }
 });
@@ -87,4 +88,5 @@ const getPathName = (requestUrl) => {
 
 const isBarcodePage = (request) => {
     return getPathName(request.url) === '/scan'
+    // get barcode scan page
 }
