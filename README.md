@@ -22,7 +22,7 @@ Entree | Scan | Search | Product | Offline
 
 ## :computer: Demo
 
-[Live demo]()
+[Live demo](https://foodchecker-zpp54.ondigitalocean.app/)
 
 ## :bulb: Concept
 
