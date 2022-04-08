@@ -48,6 +48,10 @@ The data that is used in this project comes from world.openfoodfacts.org. To get
 
 The ${barcode} is a dynamic value. It's get from the barcode scanner or from the value the user fills in in the search input field.
 
+## Job Story - Service Worker
+
+* If I have looked up or scanned a product, I want this product to be saved so that I can view it when I'm online.
+
 ## :clipboard: Assessment
 
 In this course we convert the client side web application, made during the Web App From Scratch course, into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Finally we’ll implement a series of optimisations to improve the performance of the application.
