@@ -31,9 +31,11 @@ self.addEventListener('fetch', (event) => {
                 caches.open(HTML_CACHE) // open the HTML_CACHE
                 .then(cache => cache.match(event.request.url)) // look if the event.request matches a event.request.url in the cache 
                 .then(response => response ? response : fetchAndCache(event.request))
+                // if there is a match the response is shown if there is no response then the function fetchAndCache will be executed
                 .catch(e => {
                     return caches.open(CACHE_VERSION)
                         .then(cache => cache.match('/offline'))
+                    // when there is an error, the offline page will be rendered
                 })
             )
         } else {
@@ -42,6 +44,7 @@ self.addEventListener('fetch', (event) => {
                 .catch(e => {
                     return caches.open(CACHE_VERSION)
                         .then(cache => cache.match('/offline'))
+                    // if the request is the Barcode page -> the offline page will be rendered
                 })
             )
         }
@@ -49,7 +52,7 @@ self.addEventListener('fetch', (event) => {
         event.respondWith(
             caches.open(CACHE_VERSION)
             .then(cache => cache.match(event.request.url))
-            // give page that matches a url that is in the cache storage
+            // return the files that match the request.url
         )
     }
 });
@@ -57,7 +60,8 @@ self.addEventListener('fetch', (event) => {
 const fetchAndCache = (request) => {
     return fetch(request)
         .then(response => {
-            const clone = response.clone()
+            const clone = response.clone() // the response needs to be cloned, so that the cloned response can be put in the cache
+            // if you don't clone the response, it won't work
             caches.open(HTML_CACHE).then((cache) => {
                 if (response.type === 'basic') {
                     // response.type === basic makes sure that only the pages of products that exist in the database will be cached
@@ -65,6 +69,7 @@ const fetchAndCache = (request) => {
                 }
             })
             return response
+            // with this function a page will be added to the HTML_CACHE if the response.type is 'basic'
         })
 }
 
@@ -73,17 +78,19 @@ const fetchAndCache = (request) => {
 
 const isHtmlGetRequest = (request) => {
     return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').includes('text/html'));
+    // check if the request is for a HTML page, otherwise the fetch will go to the else if and check if it's a core request
 }
 
 
 const isCoreGetRequest = (request) => {
     return request.method === 'GET' && CACHE_FILES.includes(getPathName(request.url));
-    // only return the files that are in the CACHE_FILES
+    // check if the request matches the files that are in the CACHE_FILES (style.css, main.js, /offline)
 }
 
 const getPathName = (requestUrl) => {
     const url = new URL(requestUrl);
     return url.pathname;
+    // return only the pathname, such as '/scan'
 }
 
 const isBarcodePage = (request) => {
