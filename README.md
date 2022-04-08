@@ -14,7 +14,7 @@ Entree | Scan | Search | Product | Offline
 * [Data](https://github.com/lottekoblens/progressive-web-apps-2122#file_folder-data)
 * [Job Story - Service worker](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#job-story---service-worker)
 * [Exercises](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#exercises)
-* [Optimizations (critical render path)]()
+* [Optimizations (critical render path)](https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/README.md#optimizations-critical-render-path)
 * [Assessment](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-assessment)
 * [Rubric](https://github.com/lottekoblens/progressive-web-apps-2122#clipboard-rubric)
 * [Installation](https://github.com/lottekoblens/progressive-web-apps-2122#wrench-installation)
