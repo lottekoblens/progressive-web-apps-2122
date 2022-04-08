@@ -31,7 +31,7 @@ So the app makes it easier for the user to find out if a product contains someth
 
 ## Activity Diagram
 
-<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/activitydiagram-pwa-final.png" width="600">
+<img src="https://github.com/lottekoblens/progressive-web-apps-2122/blob/main/public/images/final-activitydiagram.png" width="600">
 
 ## :high_brightness: Features
 
@@ -51,6 +51,10 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 ## Job Story - Service Worker
 
 * If I have looked up or scanned a product, I want this product to be stored in the cache so that I can view it when I'm online.
+
+## Exercises
+
+During this project we got some exercises. How I completed the exercises can be found [here]()
 
 ## :clipboard: Assessment
 
