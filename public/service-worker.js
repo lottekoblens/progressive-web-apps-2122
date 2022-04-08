@@ -26,6 +26,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', (event) => {
     if (isHtmlGetRequest(event.request)) {
         if (!isBarcodePage(event.request)) {
+            // only if the url is from a HTML page and is not the barcode page the code below will be executed
             event.respondWith(
                 caches.open(HTML_CACHE)
                 .then(cache => cache.match(event.request.url))
@@ -58,6 +59,7 @@ const fetchAndCache = (request) => {
             const clone = response.clone()
             caches.open(HTML_CACHE).then((cache) => {
                 if (response.type === 'basic') {
+                    // response.type === basic makes sure that only the pages of products that exist in the database will be cached
                     cache.put(request, clone)
                 }
             })

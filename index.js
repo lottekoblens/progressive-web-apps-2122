@@ -9,6 +9,8 @@ app.use(express.static('public'));
 app.use(compression());
 app.set('view engine', 'ejs');
 
+
+// save in cache
 app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
   res.setHeader('Cache-Control', 'max-age=31536000, immutable');
   next();
@@ -30,6 +32,7 @@ app.get('/noproduct', (req, res) => {
   res.render('noproduct');
 })
 
+// on product page do fetch with the query that comes from the input field from the search page
 app.get('/product', async (req, res) => {
   await fetch(`https://world.openfoodfacts.org/api/v0/product/${req.query.query}.json`)
     .then((res) => res.json())
@@ -44,6 +47,7 @@ app.get('/product', async (req, res) => {
     });
 });
 
+// on product:barcode page do fetch with the params that comes from the barcode scanner
 app.get('/product/:barcode', async (req, res) => {
   const barcode = req.params.barcode
   await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
@@ -60,6 +64,7 @@ app.get('/product/:barcode', async (req, res) => {
     });
 });
 
+// when the user is offline and comes on a page that isn't stored in the cache -> the offline page will be rendered
 app.get('/offline', (req, res) => {
   res.render('offline')
 })
