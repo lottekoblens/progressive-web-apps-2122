@@ -54,7 +54,7 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 
 ## Exercises
 
-During this project we got some exercises. How I completed the exercises can be found [here]()
+During this project we got some exercises. How I completed the exercises can be found [here]().
 
 ## :clipboard: Assessment
 
