@@ -56,6 +56,28 @@ The ${barcode} is a dynamic value. It's get from the barcode scanner or from the
 
 During this project we got some exercises. How I completed the exercises can be found [here](https://github.com/lottekoblens/progressive-web-apps-2122/wiki/Exercises).
 
+## Optimizations (critical render path)
+
+I optimized a couple of things:
+
+* Compression: I installed the package 'compression' and applied it to my progressive web app
+* Caching headers set: I have set the caching headers
+```js
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=31536000, immutable');
+  next();
+```
+* Responsive images
+```ejs
+<img src=<%=product.image_url %>
+  srcset="
+    <%= product.image_url %> 800w,
+    <%= product.image_small_url %> 400w,
+    <%= product.image_thumb_url %> 200w"
+alt="Product image">
+```
+* Aspect ratio and width images: to improve performance I had to set a width and height for the images. So I gave the image on the product page a width and an aspect ratio and the performance went up enormously as a result.
+
 ## :clipboard: Assessment
 
 In this course we convert the client side web application, made during the Web App From Scratch course, into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Finally we’ll implement a series of optimisations to improve the performance of the application.
